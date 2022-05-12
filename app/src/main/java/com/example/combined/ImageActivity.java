@@ -24,6 +24,7 @@ public class ImageActivity extends AppCompatActivity
         Toast.makeText(getApplicationContext(), message_ImageActivity, Toast.LENGTH_SHORT).show();
 
         showImageOnButtonClick();
+        showVideoOnButtonClick();
     }
 
     public void showImageOnButtonClick()
@@ -37,6 +38,21 @@ public class ImageActivity extends AppCompatActivity
             {
                 Intent toImageFromButtonPage = new Intent(getApplicationContext(), ImageFromButtonActivity.class);
                 startActivity(toImageFromButtonPage);
+            }
+        });
+    }
+
+    public void showVideoOnButtonClick()
+    {
+        Button bt_Video = findViewById(R.id.buttonForVideo);
+
+        bt_Video.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent toVideoFromButtonPage = new Intent(getApplicationContext(), VideoFromButtonActivity.class);
+                startActivity(toVideoFromButtonPage);
             }
         });
     }

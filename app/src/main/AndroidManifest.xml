@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Combined">
         <activity
+            android:name=".VideoFromButtonActivity"
+            android:exported="false" />
+        <activity
             android:name=".ImageFromButtonActivity"
             android:exported="false" />
         <activity

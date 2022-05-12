@@ -7,18 +7,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class ImageFromButtonActivity extends AppCompatActivity
-{
-    @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_image_from_button);
+public class VideoFromButtonActivity extends AppCompatActivity {
 
-        addOnCLickListenerToBackButton();
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_video_from_button);
+
+        addOnClickListenerToBackButton();
     }
 
-    public void addOnCLickListenerToBackButton()
+    public void addOnClickListenerToBackButton()
     {
         Button bt_BackToImageActivity = findViewById(R.id.backToImageActivity);
 
