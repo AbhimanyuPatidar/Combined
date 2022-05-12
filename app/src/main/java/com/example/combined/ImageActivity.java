@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -25,6 +26,7 @@ public class ImageActivity extends AppCompatActivity
 
         showImageOnButtonClick();
         showVideoOnButtonClick();
+        showCustomToastOnButtonClick();
     }
 
     public void showImageOnButtonClick()
@@ -53,6 +55,25 @@ public class ImageActivity extends AppCompatActivity
             {
                 Intent toVideoFromButtonPage = new Intent(getApplicationContext(), VideoFromButtonActivity.class);
                 startActivity(toVideoFromButtonPage);
+            }
+        });
+    }
+
+    public void showCustomToastOnButtonClick()
+    {
+        Button bt_CustomToast = findViewById(R.id.buttonForCustomToast);
+
+        bt_CustomToast.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                LayoutInflater layoutInflater = getLayoutInflater();
+                View layout = layoutInflater.inflate(R.layout.custom_toast, findViewById(R.id.layoutForCustomToast));
+
+                Toast toast = new Toast(getApplicationContext());
+                toast.setView(layout);
+                toast.show();
             }
         });
     }
